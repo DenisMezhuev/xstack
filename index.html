@@ -1,11 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <title>Xstack</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header-icon">
+          <a href="#" class="header-icon__lang">
+            <img
+              class="header-icon__lang_hover"
+              src="./img/language.svg"
+              alt="img"
+            />
+          </a>
+          <a href="#" class="header-icon__service">
+            <img
+              class="header-icon__service_hover"
+              src="./img/icon_service.svg"
+              alt="img"
+            />
+          </a>
+        </div>
+      </header>
+      <main class="main">
+        <div class="main-wrapper">
+          <div class="main-merchant">
+            <div class="main-merchant__wrapper">
+              <p class="main-merchant__currency">1 €</p>
+              <p>
+                <span class="main-merchant__text_1">Merchant:</span>
+                <span class="main-merchant__text_2">Forexpub</span>
+              </p>
+            </div>
+          </div>
+          <div class="main-payment">
+            <div class="main-map">
+              <div class="main-map__button">
+                <div class="main-map__button_wrapper">
+                  <img src="img/map.svg" alt="img" />
+
+                  <span class="main-map__button_wrapper_text"
+                    >Card payments</span
+                  >
+                </div>
+              </div>
+
+              <form action="#" class="form-map">
+                <div class="form-map__card">
+                  <div class="form-map__card__data">
+                    <div class="form-map__card__number">
+                      <label for="card-number"><span>Card Number</span></label>
+                      <input
+                        required
+                        name="card-number"
+                        id="card-number"
+                        type="text"
+                        placeholder="0000 0000 0000 0000"
+                        inputmode="numeric"
+                        autocomplete="cc-number"
+                        minlength="16"
+                        maxlength="16"
+                        pattern="[0-9 ]+"
+                      />
+                    </div>
+                    <div class="form-map__card__date">
+                      <label for="card-date">Expiry Date</label>
+                      <input
+                        required
+                        id="card-date"
+                        name="card-date"
+                        type="text"
+                        placeholder="00/00"
+                        autocomplete="cc-exp"
+                      />
+                    </div>
+                    <div class="form-map__card__cvv">
+                      <label for="card-cvv">CVV-Number</label>
+                      <input
+                        required
+                        id="card-cvv"
+                        name="card-cvv"
+                        type="text"
+                        placeholder="000"
+                        inputmode="numeric"
+                        maxlength="3"
+                        pattern="[0-9 ]+"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-map__card__holder">
+                    <label for="card-holder">Card Holder</label>
+                    <input
+                      required
+                      name="card-holder"
+                      id="card-holder"
+                      type="text"
+                      placeholder="IVANOV IVAN"
+                      autocomplete="cc-name"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-map__payment">
+                  <button type="submit" class="form-map__payment_pay">
+                    Pay
+                  </button>
+                  <div class="form-map__payment_block">
+                    <button type="submit" class="form-map__payment_sbp">
+                      <img src="./img/sbp_logo.svg" alt="logo_spb" />
+                    </button>
+                    <button type="submit" class="form-map__payment_sber">
+                      <img src="./img/sber_logo.svg" alt="logo_sber" />
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="main-qiwi">
+              <div class="main-qiwi__button">
+                <div class="main-qiwi__button_wrapper">
+                  <img src="img/qiwi_logo.svg" alt="img" />
+                  <span class="main-qiwi__button_wrapper_text">QIWI</span>
+                </div>
+              </div>
+
+              <form action="#" class="form-qiwi">
+                <div class="form-qiwi__phone">
+                  <label for="qiwi-phone">Phone</label>
+                  <input
+                    required
+                    name="qiwi-phone"
+                    id="qiwi-phone"
+                    type="text"
+                    placeholder="Telephone Number"
+                  />
+                </div>
+                <button type="submit" class="form-qiwi__button">Pay</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./scripts/scripts.js"></script>
+  </body>
 </html>
